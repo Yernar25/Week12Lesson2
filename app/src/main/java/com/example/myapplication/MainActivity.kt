@@ -13,9 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitymainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.textView.text = "Hi!"
-        binding.textView.setOnClickListener{
-            Toast.makeText(this, "Text clicked", Toast.LENGTH_SHORT).show()
+        binding.savePhoneButton.setOnClickListener{
+
+            val enterredText = binding.editTextTextPersonName.text
+            Toast.makeText(this, "Text $enterredText saved", Toast.LENGTH_LONG).show()
+
         }
+
+
     }
 }
